@@ -5,5 +5,5 @@ func Version() string {
 }
 
 func Author() string {
-	return "Markelov Aleksey"
+	return "Fronidze"
 }
