@@ -1,9 +1,17 @@
 package begin
 
-func Version() string {
-	return "0.0.3"
+import "github.com/google/uuid"
+
+type Profile struct {
+	Uuid uuid.UUID
+	Name string
+	Age  uint
 }
 
-func Author() string {
-	return "Fronidze"
+func (profile *Profile) New(name string, age uint) *Profile {
+	return &Profile{
+		Uuid: uuid.New(),
+		Name: name,
+		Age:  age,
+	}
 }
